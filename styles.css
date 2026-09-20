@@ -233,10 +233,23 @@ h3 {
 }
 
 .hero-intro {
-  max-width: 760px;
+  max-width: 780px;
   margin-bottom: 36px;
   color: #3f4c57;
-  font-size: clamp(1.08rem, 1.8vw, 1.26rem);
+  font-size: clamp(1rem, 1.35vw, 1.14rem);
+  line-height: 1.65;
+}
+
+.hero-intro p {
+  margin-bottom: 16px;
+}
+
+.hero-intro p:last-child {
+  margin-bottom: 0;
+}
+
+.hero-intro strong {
+  color: var(--navy-deep);
 }
 
 .hero-actions {
@@ -333,9 +346,32 @@ h3 {
   gap: clamp(40px, 8vw, 120px);
 }
 
-.two-col-heading p:last-child {
+.two-col-heading > p:last-child {
   color: var(--muted);
   font-size: 1.05rem;
+}
+
+.narrative-heading {
+  grid-template-columns: minmax(230px, 0.62fr) minmax(0, 1.38fr);
+  align-items: start;
+}
+
+.section-narrative {
+  max-width: 780px;
+}
+
+.section-narrative p {
+  margin-bottom: 18px;
+  color: var(--muted);
+  font-size: 1.02rem;
+}
+
+.section-narrative p:last-child {
+  margin-bottom: 0;
+}
+
+.section-narrative strong {
+  color: var(--navy-deep);
 }
 
 .expertise-grid {
@@ -672,14 +708,11 @@ h3 {
 }
 
 .personal-layout {
-  display: grid;
-  grid-template-columns: minmax(0, 1.05fr) minmax(360px, 0.95fr);
-  align-items: start;
-  gap: clamp(48px, 8vw, 110px);
+  display: block;
 }
 
 .personal-story {
-  max-width: 740px;
+  max-width: 860px;
 }
 
 .personal-story p {
@@ -710,8 +743,10 @@ h3 {
 
 .personal-gallery {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 16px;
+  grid-template-columns: repeat(4, minmax(0, 180px));
+  gap: 14px;
+  width: min(100%, 762px);
+  margin-top: 44px;
 }
 
 .personal-photo {
@@ -722,18 +757,18 @@ h3 {
 }
 
 .personal-photo-wide {
-  grid-column: 1 / -1;
+  grid-column: auto;
 }
 
 .personal-photo img {
   width: 100%;
-  aspect-ratio: 3 / 4;
-  object-fit: cover;
+  height: auto;
+  object-fit: contain;
   transition: transform 300ms ease;
 }
 
 .personal-photo-wide img {
-  aspect-ratio: 16 / 10;
+  aspect-ratio: auto;
 }
 
 .personal-photo:first-child img {
@@ -883,6 +918,7 @@ h3 {
   }
 
   .two-col-heading,
+  .narrative-heading,
   .credential-grid,
   .teaching-history,
   .publication-card,
@@ -950,6 +986,8 @@ h3 {
   }
 
   .personal-gallery {
+    grid-template-columns: repeat(2, minmax(0, 150px));
+    width: min(100%, 310px);
     gap: 10px;
   }
 
