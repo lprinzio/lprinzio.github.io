@@ -535,6 +535,18 @@ h3 {
   transform: translateY(-3px);
 }
 
+.credential-card-wide {
+  grid-column: 1 / -1;
+  grid-template-columns: minmax(220px, 0.55fr) minmax(0, 1.45fr);
+  align-items: center;
+  column-gap: clamp(32px, 6vw, 80px);
+  min-height: 220px;
+}
+
+.credential-card-wide .credential-copy {
+  align-self: center;
+}
+
 .logo-frame {
   display: flex;
   min-height: 105px;
@@ -916,6 +928,11 @@ h3 {
   .publication-card,
   .video-feature {
     grid-template-columns: 1fr;
+  }
+
+  .credential-card-wide {
+    grid-template-columns: 1fr;
+    gap: 20px;
   }
 
   .publication-card {
