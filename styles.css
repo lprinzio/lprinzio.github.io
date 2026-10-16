@@ -457,6 +457,81 @@ h3 {
   font-size: 2rem;
 }
 
+.training-contexts {
+  margin-bottom: 70px;
+  padding: clamp(28px, 4vw, 44px);
+  border: 1px solid var(--line);
+  background: #fff;
+}
+
+.training-contexts-heading {
+  display: grid;
+  grid-template-columns: minmax(220px, 0.75fr) minmax(0, 1.25fr);
+  column-gap: clamp(32px, 6vw, 80px);
+  align-items: start;
+  margin-bottom: 34px;
+}
+
+.training-contexts-heading .eyebrow {
+  grid-column: 1;
+  margin-bottom: 12px;
+}
+
+.training-contexts-heading h3 {
+  grid-column: 1;
+  margin: 0;
+  color: var(--navy-deep);
+  font-size: clamp(1.55rem, 2.7vw, 2.25rem);
+}
+
+.training-contexts-heading > p:last-child {
+  grid-column: 2;
+  grid-row: 1 / span 2;
+  margin: 0;
+  color: var(--muted);
+}
+
+.context-group + .context-group {
+  margin-top: 30px;
+}
+
+.context-group h4 {
+  margin-bottom: 14px;
+  color: var(--navy-deep);
+  font-size: 0.86rem;
+  font-weight: 750;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.organization-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.organization-list li {
+  padding: 9px 13px;
+  border: 1px solid var(--line);
+  color: var(--navy);
+  background: #f7f9fb;
+  font-size: 0.86rem;
+  font-weight: 650;
+  line-height: 1.25;
+}
+
+.context-note {
+  max-width: 860px;
+  margin: 30px 0 0;
+  padding-top: 18px;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 0.82rem;
+}
+
 .teaching-history {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -977,6 +1052,7 @@ h3 {
 
   .two-col-heading,
   .narrative-heading,
+  .training-contexts-heading,
   .credential-grid,
   .teaching-history,
   .publication-card,
