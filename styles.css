@@ -725,7 +725,15 @@ h3 {
   color: #afbecb;
 }
 
+.publication-links {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+}
+
 .publication-card > a,
+.publication-links a,
 .author-profile-link {
   color: var(--accent-light);
   font-size: 0.86rem;
@@ -735,8 +743,15 @@ h3 {
 }
 
 .publication-card > a:hover,
+.publication-links a:hover,
 .author-profile-link:hover {
   color: #fff;
+}
+
+.publication-republication {
+  margin-top: 16px;
+  padding-left: 14px;
+  border-left: 2px solid var(--accent);
 }
 
 .featured-publication {
